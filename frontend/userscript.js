@@ -3,7 +3,7 @@ form.addEventListener("submit",async (event) =>{
 event.preventDefault();
 })
 const usernamae = document.getElementById("username").value
-const email = document.getElementById("email").value
+const meal = document.getElementById("meal").value
 const password =document.getElementById("passwaord").value
 const confirm = document.getElementById("conform_password").value
 

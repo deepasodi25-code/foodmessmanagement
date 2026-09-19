@@ -3,27 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>userfeedback</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <title>User Feedback</title>
+
+    <link rel="stylesheet" href="userstyles.css">
 </head>
+
 <body>
+
     <h1>User Feedback</h1>
+
     <div id="container">
-        <form action="feedback" method="POST">
+
+        <form id="feedbackForm">
+
+         
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
+            <input type="text" id="username" name="username" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <br><br>
 
-            <label for="feedback">Feedback:</label>
-            <textarea id="feedback" name="feedback" required></textarea><br><br>
+
+          
+            <label>Meal Type:</label>
+
+            <div class="radio-group">
+
+                <label>
+                    <input type="radio" name="meal" value="Breakfast" required>
+                breakfast 
+                </label>
+
+                <label>
+                    <input type="radio" name="meal" value="Lunch">
+                luunch 
+                </label>
+
+                <label>
+                    <input type="radio" name="meal" value="Snacks">
+                snacks  
+                </label>
+
+                <label>
+                    <input type="radio" name="meal" value="Dinner">
+                dinner 
+                </label>
+
+            </div>
+
+            <br>
+
+
+          
+            <label>Food Quality:</label>
+
+            <div class="radio-group">
+
+                <label>
+                    <input type="radio" name="quality" value="Excellent" required>
+                excellent    
+                </label>
+
+                <label>
+                    <input type="radio" name="quality" value="Good">
+                good    
+                </label>
+
+                <label>
+                    <input type="radio" name="quality" value="Average">
+                ok-ok    
+                </label>
+
+                <label>
+                    <input type="radio" name="quality" value="Poor">
+                need to work    
+                </label>
+
+            </div>
+
+            <br>
+
+
             
+            <label for="feedback">Comment:</label>
 
-            <button type="submit">Submit Feedback</button>
+            <textarea
+                id="feedback"
+                name="feedback"
+                placeholder="Write your feedback..."
+                required>
+            </textarea>
+
+            <br><br>
+
+
+        
+            <label>Rating:</label>
+
+            <div class="rating">
+
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+
+            </div>
+
+            <input
+                type="hidden"
+                id="rating"
+                name="rating"
+                value="0"
+            >
+
+            <br><br>
+
+
+            <!-- Food Image -->
+            <label for="foodImage">Upload Food Image:</label>
+
+            <input
+                type="file"
+                id="foodImage"
+                name="foodImage"
+                accept="image/*"
+            >
+
+            <br><br>
+
+
+            <!-- Submit -->
+            <button type="submit">
+                Submit Feedback
+            </button>
+
         </form>
+
     </div>
-    <script src="script.js"></script>
-    
+
+    <script src="userfeedback.js"></script>
+
 </body>
 </html>
